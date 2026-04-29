@@ -15,6 +15,7 @@
   "scripts": {
     "build": "tsc",
     "test": "node --test --import tsx ./tests/*.test.ts",
+    "prepare": "tsc",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

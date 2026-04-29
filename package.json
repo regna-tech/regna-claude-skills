@@ -1,0 +1,46 @@
+{
+  "name": "@regnaverkt/claude-skills",
+  "version": "0.1.0",
+  "description": "Claude Code agent skills for the Regna Verkt MCP server — preset workflows for lookup, screen, compare, and research over Swedish company data.",
+  "type": "module",
+  "bin": {
+    "regna-skills": "./dist/install.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test --import tsx ./tests/*.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "mcp",
+    "regna",
+    "swedish",
+    "skills",
+    "agent-skills"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/regna-tech/regna-claude-skills.git"
+  },
+  "homepage": "https://regnaverkt.com/claude-code/",
+  "bugs": {
+    "url": "https://github.com/regna-tech/regna-claude-skills/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

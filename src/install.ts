@@ -7,7 +7,7 @@
  * overwrite cleanly so users can `npx @regnaverkt/claude-skills install` to
  * pick up new versions of the skills.
  */
-import { copyFileSync, existsSync, mkdirSync, readdirSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, realpathSync } from "node:fs";
 import { homedir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -124,9 +124,18 @@ function main(): void {
   );
 }
 
-// Detect if invoked as a CLI vs imported in tests.
-const isMain =
-  process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
-if (isMain) {
+// Detect if invoked as a CLI vs imported as a library.
+// `process.argv[1]` is often a `node_modules/.bin` symlink — resolve it to the
+// real path before comparing to this module's location.
+function isMain(): boolean {
+  if (!process.argv[1]) return false;
+  try {
+    return realpathSync(process.argv[1]) === fileURLToPath(import.meta.url);
+  } catch {
+    return false;
+  }
+}
+
+if (isMain()) {
   main();
 }

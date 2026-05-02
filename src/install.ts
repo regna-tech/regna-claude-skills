@@ -4,7 +4,7 @@
  *
  * Reads the markdown files from the package's bundled `skills/` directory and
  * writes each one into `<target>/<skill-name>/SKILL.md`. Idempotent — re-runs
- * overwrite cleanly so users can `npx @regnaverkt/claude-skills install` to
+ * overwrite cleanly so users can `npx @regna-verkt/claude-skills install` to
  * pick up new versions of the skills.
  */
 import { copyFileSync, existsSync, mkdirSync, realpathSync } from "node:fs";

@@ -10,7 +10,7 @@ description: >
   svenska bolag.
 license: MIT
 metadata:
-  package: "@regnaverkt/claude-skills"
+  package: "@regna-verkt/claude-skills"
   version: "0.1.0"
   category: regna
 ---

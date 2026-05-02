@@ -1,5 +1,5 @@
 {
-  "name": "@regnaverkt/claude-skills",
+  "name": "@regna-verkt/claude-skills",
   "version": "0.1.0",
   "description": "Claude Code agent skills for the Regna Verkt MCP server — preset workflows for lookup, screen, compare, and research over Swedish company data.",
   "type": "module",
@@ -30,6 +30,9 @@
   "license": "MIT",
   "engines": {
     "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,4 @@
-# @regnaverkt/claude-skills
+# @regna-verkt/claude-skills
 
 Claude Code agent skills for the Regna Verkt MCP server. One install drops four preset workflows into Claude Code so the model knows when to call which Regna tool — lookup, screen, compare, and research over Swedish company data.
 
@@ -7,7 +7,7 @@ Pairs with [`regna-mcp-server`](https://github.com/regna-tech/regna-mcp-server).
 ## Install
 
 ```bash
-npx @regnaverkt/claude-skills install
+npx @regna-verkt/claude-skills install
 ```
 
 Or, before the npm publish lands:
@@ -31,9 +31,9 @@ Re-running is idempotent: existing files are overwritten with the latest copy fr
 ### Custom install location
 
 ```bash
-CLAUDE_SKILLS_DIR=/some/path npx @regnaverkt/claude-skills install
+CLAUDE_SKILLS_DIR=/some/path npx @regna-verkt/claude-skills install
 # or
-npx @regnaverkt/claude-skills install --target /some/path
+npx @regna-verkt/claude-skills install --target /some/path
 ```
 
 ## What each skill does

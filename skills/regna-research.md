@@ -9,7 +9,7 @@ description: >
   ett en-sidigt PM om Y", eller vill ha en djupdykning i ett enskilt bolag.
 license: MIT
 metadata:
-  package: "@regnaverkt/claude-skills"
+  package: "@regna-verkt/claude-skills"
   version: "0.1.0"
   category: regna
 ---
